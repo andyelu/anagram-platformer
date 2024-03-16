@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2242653707750481271}
   - component: {fileID: 4024138443340475502}
   - component: {fileID: 1854736638842744813}
+  - component: {fileID: 6236874497191417465}
   m_Layer: 5
   m_Name: Creation Tile
   m_TagString: Untagged
@@ -92,6 +93,18 @@ MonoBehaviour:
   m_EffectColor: {r: 0.22745098, g: 0.22745098, b: 0.23529412, a: 1}
   m_EffectDistance: {x: 3, y: 3}
   m_UseGraphicAlpha: 1
+--- !u!114 &6236874497191417465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4302735358443142619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51c2a56b3316e4248bda65b6da104673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6855547396911388383
 GameObject:
   m_ObjectHideFlags: 0
