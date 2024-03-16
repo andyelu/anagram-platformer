@@ -1,52 +1,54 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private Rigidbody2D rb;
 
-    private float Move;
+    private float horizontal;
+    private float speed = 4f;
+    private float jumpingPower = 16f;
+    private bool isFacingRight = true;
 
-    public float speed;
-    public float jump;
 
-    public Vector2 boxSize;
-    public float castDistance;
-    public LayerMask groundLayer;
-
-    bool grounded;
-    // Start is called before the first frame update
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask groundLayer;
 
     // Update is called once per frame
     void Update()
     {
-        // Update the grounded status every frame
-        grounded = isGrounded();
+        horizontal = Input.GetAxisRaw("Horizontal");
 
-        Move = Input.GetAxisRaw("Horizontal");
-
-        rb.velocity = new Vector2(Move * speed, rb.velocity.y);
-
-        if (Input.GetButtonDown("Jump") && grounded)
+        if(Input.GetButtonDown("Jump") && IsGrounded())
         {
-            rb.AddForce(new Vector2(0, jump), ForceMode2D.Impulse);
+            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
+        if (Input.GetButtonDown("Jump") && rb.velocity.y > 0f)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.7f);
+        }
+
+        Flip();
     }
 
-    public bool isGrounded()
+    private void FixedUpdate()
     {
-        return Physics2D.BoxCast(transform.position, boxSize, 0, Vector2.down, castDistance, groundLayer);
+        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
 
-    private void OnDrawGizmos()
+    private bool IsGrounded()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(transform.position + Vector3.down * castDistance, boxSize);
+        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+    }
+
+    private void Flip()
+    {
+        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f) {
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+        }
     }
 }
