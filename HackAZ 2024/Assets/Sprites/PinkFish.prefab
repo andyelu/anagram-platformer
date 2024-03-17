@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 260031689677766411}
   - component: {fileID: 7838649242634512054}
+  - component: {fileID: 5630382782028090175}
   m_Layer: 0
   m_Name: PinkFish
   m_TagString: Fish
@@ -84,3 +85,69 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &5630382782028090175
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2971536009067028842}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.79, y: 0.8}
+    newSize: {x: 0.79, y: 0.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.355, y: 0.19}
+      - {x: 0.355, y: 0.28}
+      - {x: 0.295, y: 0.37}
+      - {x: 0.13499999, y: 0.37}
+      - {x: 0.065, y: 0.35999998}
+      - {x: -0.095, y: 0.31}
+      - {x: -0.30903512, y: 0.23100337}
+      - {x: -0.37494594, y: 0.062381484}
+      - {x: -0.375, y: -0.13}
+      - {x: -0.375, y: -0.19}
+      - {x: -0.33981347, y: -0.35674202}
+      - {x: -0.9394878, y: -0.6640149}
+      - {x: -0.4529267, y: -0.6465471}
+      - {x: -0.27897877, y: -0.63857716}
+      - {x: 0.28683746, y: -0.64017624}
+      - {x: 0.32820475, y: -0.64428663}
+      - {x: 0.388141, y: -0.6283641}
+      - {x: 1.0140743, y: -0.643515}
+      - {x: 0.2514251, y: -0.35127887}
+      - {x: 0.3267864, y: -0.3245368}
+      - {x: 0.36335403, y: -0.08807056}
+  m_UseDelaunayMesh: 0

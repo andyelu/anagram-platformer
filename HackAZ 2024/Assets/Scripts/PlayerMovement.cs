@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private float lastGroundedTime;
     private float lastJumpTime;
     private bool isGrounded;
-    public FishManager fm;
+    public float nextLevel;
 
     private void Awake()
     {
@@ -110,7 +110,7 @@ public class PlayerMovement : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.CompareTag("Fish")) {
             Destroy(other.gameObject);
-            SceneManager.LoadScene("Level " + 3);
+            SceneManager.LoadScene("Level " + nextLevel);
         }
     }
 
