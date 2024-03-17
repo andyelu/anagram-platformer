@@ -33,11 +33,11 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded)
         {
             lastGroundedTime = Time.time;
-            animator.SetBool("IsJumping", false); 
+            //animator.SetBool("IsJumping", false); 
         }
         else
         {
-            animator.SetBool("IsJumping", true); 
+            //animator.SetBool("IsJumping", true); 
         }
 
         if (Input.GetButtonDown("Jump") && (Time.time - lastGroundedTime <= coyoteTime))
