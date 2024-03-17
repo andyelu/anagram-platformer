@@ -126,7 +126,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 32
+  m_Spacing: 8
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -322,7 +322,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 32
+  m_Spacing: 24
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -350,6 +350,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4516030852619828503}
     m_Modifications:
+    - target: {fileID: 4024138443340475502, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4302735358443142619, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
       propertyPath: m_Name
       value: Creation Tile (5)
@@ -536,6 +540,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Letter Tile (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6000242278922635959, guid: 4fe124cd4fb34894cb469529dc5c73f2, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -554,6 +562,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4516030852619828503}
     m_Modifications:
+    - target: {fileID: 4024138443340475502, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4302735358443142619, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
       propertyPath: m_Name
       value: Creation Tile (3)
@@ -740,6 +752,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Letter Tile (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6000242278922635959, guid: 4fe124cd4fb34894cb469529dc5c73f2, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -758,6 +774,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4516030852619828503}
     m_Modifications:
+    - target: {fileID: 4024138443340475502, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4302735358443142619, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
       propertyPath: m_Name
       value: Creation Tile
@@ -944,6 +964,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Letter Tile
       objectReference: {fileID: 0}
+    - target: {fileID: 6000242278922635959, guid: 4fe124cd4fb34894cb469529dc5c73f2, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6841580446602982933, guid: 4fe124cd4fb34894cb469529dc5c73f2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1046,6 +1074,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Letter Tile (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6000242278922635959, guid: 4fe124cd4fb34894cb469529dc5c73f2, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1064,6 +1096,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4516030852619828503}
     m_Modifications:
+    - target: {fileID: 4024138443340475502, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4302735358443142619, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
       propertyPath: m_Name
       value: Creation Tile (1)
@@ -1250,6 +1286,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Letter Tile (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6000242278922635959, guid: 4fe124cd4fb34894cb469529dc5c73f2, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1268,6 +1308,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4516030852619828503}
     m_Modifications:
+    - target: {fileID: 4024138443340475502, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4302735358443142619, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
       propertyPath: m_Name
       value: Creation Tile (4)
@@ -1454,6 +1498,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Letter Tile (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6000242278922635959, guid: 4fe124cd4fb34894cb469529dc5c73f2, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1472,6 +1520,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4516030852619828503}
     m_Modifications:
+    - target: {fileID: 4024138443340475502, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4302735358443142619, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
       propertyPath: m_Name
       value: Creation Tile (2)
