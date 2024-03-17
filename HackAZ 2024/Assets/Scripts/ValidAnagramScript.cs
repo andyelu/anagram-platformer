@@ -29,12 +29,10 @@ public class ValidAnagramScript : MonoBehaviour
                 if (webRequest.responseCode == 200) 
                 {
                     Debug.Log($"Word is valid: {word}");
-                    References.isValidWord = true;
                 }
                 else if (webRequest.responseCode == 404) 
                 {
                     Debug.Log($"Word is not valid: {word}");
-                    References.isValidWord = false;
                 }
             }
         }

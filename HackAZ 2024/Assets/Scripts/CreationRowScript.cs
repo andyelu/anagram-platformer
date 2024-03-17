@@ -35,7 +35,7 @@ public class CreationRowScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return))
         {
             Debug.Log("Initiating word validation");
-            validateWord();
+            Debug.Log(validateWord());
         }
 
         if (Input.GetKeyDown(KeyCode.Delete) || Input.GetKeyDown(KeyCode.Backspace))
@@ -90,7 +90,7 @@ public class CreationRowScript : MonoBehaviour
         removeLetterAtIndex(n - 1);
     }
 
-    public void validateWord()
+    public bool validateWord()
     {
         string word = "";
         
@@ -101,11 +101,13 @@ public class CreationRowScript : MonoBehaviour
 
         if (!string.IsNullOrWhiteSpace(word) && validAnagramScript != null)
         {
-            validAnagramScript.CheckWord(word);
+            bool stat = APIHelper.GetStatus(word);
+            return stat;
         }
         else
         {
             Debug.Log("No word to validate or ValidAnagramScript not found.");
+            return false;
         }
     }
 
