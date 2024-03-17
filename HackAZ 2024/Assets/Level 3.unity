@@ -1890,6 +1890,7 @@ GameObject:
   - component: {fileID: 780789805}
   - component: {fileID: 780789806}
   - component: {fileID: 780789807}
+  - component: {fileID: 780789808}
   m_Layer: 3
   m_Name: Tilemap Front
   m_TagString: Untagged
@@ -6227,6 +6228,59 @@ PolygonCollider2D:
       - {x: 119.00938, y: 3.0185082}
       - {x: 118.99787, y: 4.9998846}
       - {x: 118.44256, y: 5.0037265}
+  m_UseDelaunayMesh: 0
+--- !u!60 &780789808
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780789801}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -3.450473, y: 0.93793344}
+      - {x: -7.5351863, y: 0.94627094}
+      - {x: -7.8069673, y: 0.7215912}
+      - {x: -7.8316374, y: 0.33076775}
+      - {x: -7.6078057, y: 0.057679534}
+      - {x: -3.3402073, y: 0.050897956}
+      - {x: -3.1748738, y: 0.3161015}
+      - {x: -3.1557355, y: 0.6766231}
   m_UseDelaunayMesh: 0
 --- !u!1 &812842254
 GameObject:
@@ -12065,6 +12119,8 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  resetThreshold: -7
+  fm: {fileID: 0}
 --- !u!50 &1612912291
 Rigidbody2D:
   serializedVersion: 4
@@ -12153,7 +12209,7 @@ Transform:
   m_GameObject: {fileID: 1612912286}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 116.29, y: 8.94, z: 0}
+  m_LocalPosition: {x: -5.5, y: 8.94, z: 0}
   m_LocalScale: {x: 0.50148034, y: 0.50148034, z: 0.50148034}
   m_ConstrainProportionsScale: 0
   m_Children:

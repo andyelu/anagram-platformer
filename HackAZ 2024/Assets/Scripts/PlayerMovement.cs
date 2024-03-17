@@ -1,5 +1,7 @@
 using UnityEngine;
-using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -9,12 +11,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float coyoteTime = 0.2f;
     [SerializeField] private LayerMask groundLayer;
 
+    public float resetThreshold = -7f;
     private Rigidbody2D rb;
     private CapsuleCollider2D col;
     private Animator animator;
     private float lastGroundedTime;
     private float lastJumpTime;
     private bool isGrounded;
+    public FishManager fm;
 
     private void Awake()
     {
@@ -25,6 +29,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if(transform.position.y < resetThreshold) {
+            StartCoroutine(ScreenWipeAndReset());
+        }
+
         float horizontal = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
 
@@ -33,11 +41,12 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded)
         {
             lastGroundedTime = Time.time;
-            //animator.SetBool("IsJumping", false); 
+            // You can re-enable the animator controls if needed
+            // animator.SetBool("IsJumping", false); 
         }
         else
         {
-            //animator.SetBool("IsJumping", true); 
+            // animator.SetBool("IsJumping", true); 
         }
 
         if (Input.GetButtonDown("Jump") && (Time.time - lastGroundedTime <= coyoteTime))
@@ -49,13 +58,20 @@ public class PlayerMovement : MonoBehaviour
         Flip(horizontal);
     }
 
+    IEnumerator ScreenWipeAndReset()
+    {
+
+        yield return new WaitForSeconds(1f); 
+
+        // Reload the scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
         if (collision.gameObject.CompareTag("Ground"))
         {
             Vector2 normal = collision.GetContact(0).normal;
-            
             if (normal.y > 0.5)
             {
                 isGrounded = true;
@@ -68,8 +84,6 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             Vector2 normal = collision.GetContact(0).normal;
-
-            
             if (Mathf.Abs(normal.y) > 0.5)
             {
                 isGrounded = true;
@@ -78,7 +92,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (isGrounded && Mathf.Abs(normal.y) <= 0.5)
                 {
-                    
                     rb.velocity = new Vector2(rb.velocity.x, -1f);
                     isGrounded = false; 
                 }
@@ -91,6 +104,13 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = false;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other){
+        if(other.gameObject.CompareTag("Fish")) {
+            Destroy(other.gameObject);
+            SceneManager.LoadScene("Level " + 3);
         }
     }
 
