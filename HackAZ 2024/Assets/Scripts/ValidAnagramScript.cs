@@ -1,66 +1,42 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class ValidAnagramScript : MonoBehaviour
 {
-    public Tile[] tiles { get; private set; }
-    private int n;
+    private readonly string baseUrl = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 
-    private void Awake()
+    public void CheckWord(string word)
     {
-        References.ValidAnagramScript = this;
+        StartCoroutine(IsWordValid(word));
     }
 
-    void Start()
+    private IEnumerator IsWordValid(string word)
     {
-        tiles = GetComponentsInChildren<Tile>();
-        foreach (Tile tile in tiles)
+        string url = $"{baseUrl}{word}";
+        using (UnityWebRequest webRequest = UnityWebRequest.Get(url))
         {
-            tile.validAnagramScript = this; // Sets the letterBankScript reference in each Tile
-        }
-        n = 0;
+            yield return webRequest.SendWebRequest();
 
-    }
-
-    public void addLetter(char letter)
-    {
-        if (n >= 6)
-        {
-            Debug.Log("arr full");
-            return;
-        }
-
-        tiles[n].SetLetter(letter);
-        n++;
-    }
-
-    public void removeLetterAtIndex(int index)
-    {
-        if (tiles[index].letter == ' ')
-        {
-            Debug.Log("already removed");
-            return;
-        }
-
-        tiles[index].SetLetter(' ');
-        n--;
-    }
-
-    public void OnTileClicked(Tile clickedTile)
-    {
-        int index = Array.IndexOf(tiles, clickedTile);
-        if (index != -1)
-        {
-            Debug.Log("Clicked tile index (ANAGRAM): " + index);
-
-            if (tiles[index].letter != ' ')
+            if (webRequest.result == UnityWebRequest.Result.ConnectionError || webRequest.result == UnityWebRequest.Result.ProtocolError)
             {
-                References.LetterBankScript.addLetter(tiles[index].letter);
-                removeLetterAtIndex(index);
+                Debug.Log($"Error when checking word: {word}. {webRequest.error}");
+                Debug.Log($"Response Code: {webRequest.responseCode}");
+                Debug.Log($"Response Body: {webRequest.downloadHandler.text}");
             }
-
+            else
+            {
+                if (webRequest.responseCode == 200) 
+                {
+                    Debug.Log($"Word is valid: {word}");
+                    References.isValidWord = true;
+                }
+                else if (webRequest.responseCode == 404) 
+                {
+                    Debug.Log($"Word is not valid: {word}");
+                    References.isValidWord = false;
+                }
+            }
         }
     }
 }

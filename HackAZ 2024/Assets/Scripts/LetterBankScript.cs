@@ -20,7 +20,7 @@ public class LetterBankScript : MonoBehaviour
         
         foreach (Tile tile in letters)
         {
-            tile.letterBankScript = this; // Sets the letterBankScript reference in each Tile
+            tile.letterBankScript = this;
         }
         fillArr();
         n = 6;
@@ -51,7 +51,16 @@ public class LetterBankScript : MonoBehaviour
             return;
         }
 
-        letters[n].SetLetter(letter);
+        for (int i = 0; i < letters.Length; i++)
+        {
+            if (letters[i].letter == ' ')
+            {
+                letters[i].SetLetter(letter);
+                return;
+            }
+        }
+        
+
         n++;
     }
 
@@ -76,9 +85,9 @@ public class LetterBankScript : MonoBehaviour
             
             if (letters[index].letter != ' ')
             {
-                References.ValidAnagramScript.addLetter(letters[index].letter);
+                References.CreationRowScript.addLetter(letters[index].letter);
                 removeLetterAtIndex(index);
-                Debug.Log(References.ValidAnagramScript.tiles);
+                Debug.Log(References.CreationRowScript.tiles);
             }
             
         }

@@ -7,7 +7,7 @@ public class Tile : MonoBehaviour, IPointerClickHandler
 {
     private TextMeshProUGUI text;
     public LetterBankScript letterBankScript;
-    public ValidAnagramScript validAnagramScript;
+    public CreationRowScript creationRowScript;
 
     public char letter { get; set; }
 
@@ -30,9 +30,9 @@ public class Tile : MonoBehaviour, IPointerClickHandler
             letterBankScript.OnTileClicked(this);
         }
 
-        if (validAnagramScript != null)
+        if (creationRowScript != null)
         {
-            validAnagramScript.OnTileClicked(this);
+            creationRowScript.OnTileClicked(this);
         }
     }
 }
