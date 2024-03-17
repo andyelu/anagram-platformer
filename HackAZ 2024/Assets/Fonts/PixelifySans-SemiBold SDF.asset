@@ -578,8 +578,41 @@ MonoBehaviour:
   m_FreeGlyphRects:
   - m_X: 110
     m_Y: 78
-    m_Width: 913
-    m_Height: 945
+    m_Width: 63
+    m_Height: 78
+  - m_X: 0
+    m_Y: 109
+    m_Width: 63
+    m_Height: 78
+  - m_X: 173
+    m_Y: 78
+    m_Width: 63
+    m_Height: 78
+  - m_X: 236
+    m_Y: 78
+    m_Width: 63
+    m_Height: 78
+  - m_X: 299
+    m_Y: 78
+    m_Width: 63
+    m_Height: 78
+  - m_X: 362
+    m_Y: 78
+    m_Width: 79
+    m_Height: 78
+  - m_X: 441
+    m_Y: 78
+    m_Width: 63
+    m_Height: 78
+  m_FreeGlyphRects:
+  - m_X: 1000
+    m_Y: 0
+    m_Width: 23
+    m_Height: 78
+  - m_X: 1016
+    m_Y: 0
+    m_Width: 7
+    m_Height: 1023
   - m_X: 110
     m_Y: 31
     m_Width: 8
