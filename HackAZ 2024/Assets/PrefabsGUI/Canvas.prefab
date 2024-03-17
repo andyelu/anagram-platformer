@@ -29,8 +29,8 @@ RectTransform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 6902521924931714572}
   - {fileID: 4516030852619828503}
+  - {fileID: 6902521924931714572}
   m_Father: {fileID: 143947616797162573}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -126,7 +126,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 24
+  m_Spacing: 0
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -426,10 +426,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4516030852619828503}
     m_Modifications:
-    - target: {fileID: 4024138443340475502, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 4302735358443142619, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
       propertyPath: m_Name
       value: Creation Tile (5)
@@ -638,10 +634,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4516030852619828503}
     m_Modifications:
-    - target: {fileID: 4024138443340475502, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 4302735358443142619, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
       propertyPath: m_Name
       value: Creation Tile (3)
@@ -850,10 +842,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4516030852619828503}
     m_Modifications:
-    - target: {fileID: 4024138443340475502, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 4302735358443142619, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
       propertyPath: m_Name
       value: Creation Tile
@@ -1036,6 +1024,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5117299223699577117, guid: 4fe124cd4fb34894cb469529dc5c73f2, type: 3}
+      propertyPath: radius
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5621139617931421441, guid: 4fe124cd4fb34894cb469529dc5c73f2, type: 3}
       propertyPath: m_Name
       value: Letter Tile
@@ -1172,10 +1164,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4516030852619828503}
     m_Modifications:
-    - target: {fileID: 4024138443340475502, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 4302735358443142619, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
       propertyPath: m_Name
       value: Creation Tile (1)
@@ -1384,10 +1372,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4516030852619828503}
     m_Modifications:
-    - target: {fileID: 4024138443340475502, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 4302735358443142619, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
       propertyPath: m_Name
       value: Creation Tile (4)
@@ -1596,10 +1580,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4516030852619828503}
     m_Modifications:
-    - target: {fileID: 4024138443340475502, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 4302735358443142619, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
       propertyPath: m_Name
       value: Creation Tile (2)
