@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/LevelSelect.unity
+    guid: 07bae2784ffd8ea4e809dad9e1a44595
+  - enabled: 1
+    path: Assets/EasyLevel.unity
+    guid: 948a7fa01de37e5408ee243730b13bcc
+  - enabled: 1
+    path: Assets/AnagramGUI.unity
+    guid: b0d047bf3b3d4394981f4ed441c5da44
   m_configObjects: {}
