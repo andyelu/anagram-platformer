@@ -286,7 +286,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 1
+  m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -1372,6 +1372,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4516030852619828503}
     m_Modifications:
+    - target: {fileID: 4024138443340475502, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024138443340475502, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024138443340475502, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4302735358443142619, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
       propertyPath: m_Name
       value: Creation Tile (4)
@@ -1580,6 +1592,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4516030852619828503}
     m_Modifications:
+    - target: {fileID: 4024138443340475502, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024138443340475502, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024138443340475502, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4302735358443142619, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
       propertyPath: m_Name
       value: Creation Tile (2)
@@ -1662,6 +1686,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5018914861266587180, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5876217943412552143, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

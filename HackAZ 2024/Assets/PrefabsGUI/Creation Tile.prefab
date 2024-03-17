@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2242653707750481271}
   - component: {fileID: 4024138443340475502}
   - component: {fileID: 6236874497191417465}
+  - component: {fileID: 5876217943412552143}
+  - component: {fileID: 3259377214915784668}
   m_Layer: 5
   m_Name: Creation Tile
   m_TagString: Untagged
@@ -67,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 583a8477f6fc90c41ae5d7e4681e82c5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 81d18f938701c184d8f82aeae5c80627, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -95,6 +97,33 @@ MonoBehaviour:
   emptyBlock: {fileID: 21300000, guid: 583a8477f6fc90c41ae5d7e4681e82c5, type: 3}
   letterBlock: {fileID: 21300000, guid: a14dfa94c14ef6947b40a6df29a23ca3, type: 3}
   imageComponent: {fileID: 4024138443340475502}
+--- !u!114 &5876217943412552143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4302735358443142619}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 0.5}
+  m_EffectDistance: {x: 2, y: 2}
+  m_UseGraphicAlpha: 1
+--- !u!114 &3259377214915784668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4302735358443142619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ab1a9cfe67d3044bbf33b1f2b7dcc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6855547396911388383
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,8 +191,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cc2bc83dadcf7cb43b183c7dcefdbb03, type: 2}
-  m_sharedMaterial: {fileID: -5063716614474024976, guid: cc2bc83dadcf7cb43b183c7dcefdbb03, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3376939336cb71c4fb39b34a9414e9a7, type: 2}
+  m_sharedMaterial: {fileID: 3250439096328119329, guid: 3376939336cb71c4fb39b34a9414e9a7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -187,13 +216,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 4096
   m_textAlignment: 65535
