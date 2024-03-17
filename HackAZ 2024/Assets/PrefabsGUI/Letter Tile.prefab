@@ -242,6 +242,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   letterBankScript: {fileID: 0}
   creationRowScript: {fileID: 0}
+  iceBlock: {fileID: 21300000, guid: 81d18f938701c184d8f82aeae5c80627, type: 3}
+  emptyBlock: {fileID: 21300000, guid: 583a8477f6fc90c41ae5d7e4681e82c5, type: 3}
+  letterBlock: {fileID: 21300000, guid: a14dfa94c14ef6947b40a6df29a23ca3, type: 3}
+  imageComponent: {fileID: 6000242278922635959}
 --- !u!114 &5117299223699577117
 MonoBehaviour:
   m_ObjectHideFlags: 0

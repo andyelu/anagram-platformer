@@ -23,7 +23,9 @@ public class CreationRowScript : MonoBehaviour
         foreach (Tile tile in tiles)
         {
             tile.creationRowScript = this; // Sets the letterBankScript reference in each Tile
+            tile.SetLetter(' ');
         }
+        //initalizeEmptyBoxes();
         n = 0;
 
     }
@@ -67,7 +69,6 @@ public class CreationRowScript : MonoBehaviour
         n--;
     }
 
-    // make this work for delete key too
     public void OnTileClicked(Tile clickedTile)
     {
         int index = Array.IndexOf(tiles, clickedTile);
