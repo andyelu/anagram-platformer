@@ -69,19 +69,18 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector2 normal = collision.GetContact(0).normal;
 
-            // Check if the normal is mostly vertical (ground)
+            
             if (Mathf.Abs(normal.y) > 0.5)
             {
                 isGrounded = true;
             }
-            else // if the normal is mostly horizontal (wall)
+            else 
             {
-                // Make the player start falling if they're on a wall
                 if (isGrounded && Mathf.Abs(normal.y) <= 0.5)
                 {
-                    // Force the player to fall
+                    
                     rb.velocity = new Vector2(rb.velocity.x, -1f);
-                    isGrounded = false; // They are not grounded, they're on a wall
+                    isGrounded = false; 
                 }
             }
         }
