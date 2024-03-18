@@ -134,14 +134,14 @@ public class CreationRowScript : MonoBehaviour
 
         if (!string.IsNullOrWhiteSpace(word) && validAnagramScript != null)
         {
-            bool stat = APIHelper.GetStatus(word);
-            return stat;
+            // Check if the dictionary contains the key and if the set associated with this key contains the word.
+            if (DictionaryUtils.bank.ContainsKey(References.currentKey) && DictionaryUtils.bank[References.currentKey].Contains(word))
+            {
+                return true;
+            }
         }
-        else
-        {
-            Debug.Log("No word to validate or ValidAnagramScript not found.");
-            return false;
-        }
+
+        return false;
     }
 
 }

@@ -3,6 +3,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+
 
 public class LetterBankScript : MonoBehaviour
 {
@@ -33,14 +35,37 @@ public class LetterBankScript : MonoBehaviour
 
     private void fillArr()
     {
+        int len = DictionaryUtils.bank.Count;
+        int randomNum = UnityEngine.Random.Range(0, len);
+        string[] keysArray = DictionaryUtils.bank.Keys.ToArray();
+        string str = keysArray[randomNum];
+        References.currentKey = str;
+        string shuffledString = ShuffleString(str);
+
         for (int i = 0; i < letters.Length; i++)
         {
-            int randomNum = UnityEngine.Random.Range(0, 26);
-            char letter = (char)('A' + randomNum);
+            char letter = shuffledString[i];
             letters[i].SetLetter(letter);
         }
 
 
+    }
+
+    // Method to shuffle a string
+    public static string ShuffleString(string str)
+    {
+        System.Random rng = new System.Random();
+        char[] array = str.ToCharArray();
+        int n = array.Length;
+        while (n > 1)
+        {
+            n--;
+            int k = rng.Next(n + 1);
+            var value = array[k];
+            array[k] = array[n];
+            array[n] = value;
+        }
+        return new String(array);
     }
 
     public void addLetter(char letter)
