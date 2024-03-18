@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(transform.position.y < resetThreshold) {
             StartCoroutine(ScreenWipeAndReset());
-
+            Tracker.Reset();
             screenAnimator.SetTrigger("Fall");
         }
 
@@ -113,6 +113,7 @@ public class PlayerMovement : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.CompareTag("Fish")) {
             Destroy(other.gameObject);
+            Tracker.Reset();
             SceneManager.LoadScene("Level " + nextLevel);
         }
     }

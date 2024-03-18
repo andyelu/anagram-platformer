@@ -16,6 +16,7 @@ public class Bullet : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Player"))
         {
+            Tracker.Reset();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         else

@@ -13,6 +13,7 @@ public class LevelSelect1 : MonoBehaviour
     }
 
     public void OpenScene() {
+        Tracker.Reset();
         SceneManager.LoadScene("Level " + level.ToString());
     }
 }
