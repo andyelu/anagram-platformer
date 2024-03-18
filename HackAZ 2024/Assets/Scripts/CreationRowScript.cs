@@ -11,7 +11,14 @@ public class CreationRowScript : MonoBehaviour
     [SerializeField]
     private ValidAnagramScript validAnagramScript;
 
-    public GameObject prefabToPlace;
+    public GameObject prefabLenOne;
+    public GameObject prefabLenTwo;
+    public GameObject prefabLenThree;
+    public GameObject prefabLenFour;
+    public GameObject prefabLenFive;
+    public GameObject prefabLenSix;
+    GameObject[] prefabs;
+
     public Canvas worldSpaceCanvas;
     public Camera mainCamera;
 
@@ -30,6 +37,8 @@ public class CreationRowScript : MonoBehaviour
         }
         //initalizeEmptyBoxes();
         n = 0;
+        prefabs = new GameObject[] { prefabLenOne, prefabLenTwo, prefabLenThree, prefabLenFour, prefabLenFive, prefabLenSix };
+
 
     }
 
@@ -40,18 +49,14 @@ public class CreationRowScript : MonoBehaviour
             Debug.Log("Initiating word validation");
             if (validateWord())
             {
-
-                // Use the current mouse position
                 Vector3 screenPoint = Input.mousePosition;
-                // Ensure the z-coordinate is set properly to project the mouse position into the world correctly
                 screenPoint.z = mainCamera.nearClipPlane;
                 Vector3 worldPoint = mainCamera.ScreenToWorldPoint(screenPoint);
-                worldPoint.z = 0; // Assuming you want the prefab to be instantiated at z = 0
+                worldPoint.z = 0;
                 Debug.Log(worldPoint);
 
-                // Instantiate the prefab at the calculated world point
-                // If the prefab is a UI element and should be part of the worldSpaceCanvas, set it as the parent
-                GameObject blocks = Instantiate(prefabToPlace, worldPoint, Quaternion.identity, worldSpaceCanvas.transform);
+                // place prefab into the game canvas
+                GameObject blocks = Instantiate(prefabs[n-1], worldPoint, Quaternion.identity, worldSpaceCanvas.transform);
                 transferAllLettersToBank();
                 //blocks.transform.position = Input.mousePosition;
 

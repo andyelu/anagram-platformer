@@ -147,7 +147,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   validAnagramScript: {fileID: 4898532538330101333}
-  prefabToPlace: {fileID: 0}
+  prefabLenOne: {fileID: 1458694409350793292, guid: 3c1394bb7ebf2bd4b8e6f98e8c0eea40, type: 3}
+  prefabLenTwo: {fileID: 5485523783461004875, guid: 7ca7999056f15d24f9284d6be99a89b5, type: 3}
+  prefabLenThree: {fileID: 1458694409350793292, guid: fe11c6f8680dc4142a808dd40b932034, type: 3}
+  prefabLenFour: {fileID: 4750977302757467836, guid: 7e05892dfe1b7a44eae0c41b40d7155f, type: 3}
+  prefabLenFive: {fileID: 6388954824946522783, guid: 160a6a77d85839f43a864ff405454579, type: 3}
+  prefabLenSix: {fileID: 5511687254208030541, guid: a8ceaeb0023b74448be7a35fd09e1f41, type: 3}
   worldSpaceCanvas: {fileID: 0}
   mainCamera: {fileID: 0}
 --- !u!114 &4898532538330101333

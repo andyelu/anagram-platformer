@@ -12,11 +12,12 @@ public static class APIHelper
         string url = $"https://api.dictionaryapi.dev/api/v2/entries/en/{word}";
         HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
         HttpWebResponse res = (HttpWebResponse)req.GetResponse();
-        
+
         if (res.StatusCode == HttpStatusCode.OK)
         {
             return true;
-        } else
+        }
+        else
         {
             return false;
         }
