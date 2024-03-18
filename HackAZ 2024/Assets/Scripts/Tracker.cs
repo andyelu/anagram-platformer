@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class Tracker
 {
-    //private static HashSet<string> _words = new HashSet<string>();
+    private static HashSet<string> _words = new HashSet<string>();
 
     public static void Add(string word)
     {
@@ -15,5 +15,10 @@ public static class Tracker
     {
         _words.Clear();
         Debug.Log("Words collection has been reset.");
+    }
+
+    public static bool Contains(string word)
+    {
+        return _words.Contains(word);
     }
 }

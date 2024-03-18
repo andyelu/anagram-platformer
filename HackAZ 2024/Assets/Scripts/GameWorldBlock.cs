@@ -9,23 +9,18 @@ public class GameWorldBlock : MonoBehaviour
     [SerializeField]
     private bool isClicked = false;
     private BoxCollider2D[] boxes;
-    private TextMeshProUGUI[] texts; // To store TextMeshProUGUI components of children
-
-    // Removed the letter property since we now deal with multiple letters
-
+    private TextMeshProUGUI[] texts;
     private void Start()
     {
         boxes = GetComponentsInChildren<BoxCollider2D>();
         texts = GetComponentsInChildren<TextMeshProUGUI>(); // Get all TextMeshProUGUI components in children
 
-        // Ensure we have enough characters in our string for all children
         if (References.currentString.Length >= texts.Length)
         {
             for (int i = 0; i < texts.Length; i++)
             {
                 if (References.counter < References.currentString.Length)
                 {
-                    // Assign a letter to each TextMeshProUGUI component from the string
                     char letter = References.currentString[References.counter];
                     texts[i].text = letter.ToString();
                     References.counter++; // Move to the next character for the next child
@@ -42,7 +37,6 @@ public class GameWorldBlock : MonoBehaviour
     {
         if (!isClicked)
         {
-            // Disable all child colliders
             foreach (var collider in boxes)
             {
                 collider.enabled = false;
@@ -67,9 +61,10 @@ public class GameWorldBlock : MonoBehaviour
 
     private void ResetCounterAndString()
     {
+        // add string to set of used words
+        Tracker.Add(References.currentString);
         References.currentString = string.Empty;
         References.counter = 0;
     }
 
-    // Removed the SetLetter method since it's no longer needed for this use case
 }
