@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameWorldBlock : MonoBehaviour
@@ -13,15 +14,20 @@ public class GameWorldBlock : MonoBehaviour
         if (!isClicked)
         {
             Debug.Log("Moving");
-            // Calculate the distance from the camera to the object. For example:
-            float distanceFromCamera = Mathf.Abs(Camera.main.transform.position.z) + 10; // Adjust '10' as needed to ensure visibility
+            // Calculate the distance from the camera to the prefab. 
+            // This value should be positive and within the camera's clipping range.
+            float distanceFromCamera = Mathf.Abs(Camera.main.transform.position.z - transform.position.z);
 
-            // Convert the mouse position to a world position using the calculated distance
-            Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, distanceFromCamera);
-            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+            // Use the camera to convert the screen position of the mouse to a world position,
+            // using the calculated distance for the z value.
+            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distanceFromCamera));
 
-            // Update the object's position
-            transform.position = new Vector3(worldPosition.x, worldPosition.y, transform.position.z); // Keep original Z or set as needed
+            transform.position = worldPosition;
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                isClicked = true;
+            }
         }
 
     }

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8612718114683242618}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: FourRunTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,9 +47,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8612718114683242618}
     m_Modifications:
+    - target: {fileID: 3700504487413742232, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5248412362136661684, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: m_Name
       value: GameWorldBlock (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248412362136661684, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5507764500817523978, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: m_Pivot.x
@@ -113,7 +121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5507764500817523978, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1.44
+      value: 0.72
       objectReference: {fileID: 0}
     - target: {fileID: 5507764500817523978, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -149,9 +157,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8612718114683242618}
     m_Modifications:
+    - target: {fileID: 3700504487413742232, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5248412362136661684, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: m_Name
       value: GameWorldBlock (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248412362136661684, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5507764500817523978, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: m_Pivot.x
@@ -215,7 +231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5507764500817523978, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.96
+      value: 0.24
       objectReference: {fileID: 0}
     - target: {fileID: 5507764500817523978, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -251,9 +267,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8612718114683242618}
     m_Modifications:
+    - target: {fileID: 3700504487413742232, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5248412362136661684, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: m_Name
       value: GameWorldBlock (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248412362136661684, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5507764500817523978, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: m_Pivot.x
@@ -317,7 +341,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5507764500817523978, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.48
+      value: -0.24
       objectReference: {fileID: 0}
     - target: {fileID: 5507764500817523978, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -353,9 +377,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8612718114683242618}
     m_Modifications:
+    - target: {fileID: 3700504487413742232, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5248412362136661684, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: m_Name
       value: GameWorldBlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248412362136661684, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5507764500817523978, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: m_Pivot.x
@@ -419,7 +451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5507764500817523978, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -0.72
       objectReference: {fileID: 0}
     - target: {fileID: 5507764500817523978, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: m_AnchoredPosition.y
