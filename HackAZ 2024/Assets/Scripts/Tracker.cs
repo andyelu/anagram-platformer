@@ -16,4 +16,9 @@ public static class Tracker
         _words.Clear();
         Debug.Log("Words collection has been reset.");
     }
+
+    public static bool Contains(string word)
+    {
+        return _words.Contains(word);
+    }
 }

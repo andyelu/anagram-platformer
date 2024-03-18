@@ -56,6 +56,7 @@ public class CreationRowScript : MonoBehaviour
                 Debug.Log(worldPoint);
 
                 // place prefab into the game canvas
+                setCurrentStringGlobalReference();
                 GameObject blocks = Instantiate(prefabs[n-1], worldPoint, Quaternion.identity, worldSpaceCanvas.transform);
                 transferAllLettersToBank();
                 //blocks.transform.position = Input.mousePosition;
@@ -92,6 +93,19 @@ public class CreationRowScript : MonoBehaviour
 
         tiles[index].SetLetter(' ');
         n--;
+    }
+
+    public void setCurrentStringGlobalReference()
+    {
+        string str = "";
+
+        for (int i = 0; i < n; i++)
+        {
+            str += tiles[i].letter;
+        }
+
+        References.currentString = str;
+        Debug.Log(References.currentString);
     }
 
     public void OnTileClicked(Tile clickedTile)
