@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -8,10 +9,12 @@ public class GameWorldBlock : MonoBehaviour
     [SerializeField]
     private bool isClicked = false;
     private BoxCollider2D[] boxes;
+    private TextMeshProUGUI text;
 
     private void Start()
     {
         boxes = GetComponentsInChildren<BoxCollider2D>();
+        text = GetComponentInChildren<TextMeshProUGUI>();
     }
 
     void Update()
