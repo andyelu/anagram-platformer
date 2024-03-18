@@ -1264,7 +1264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpingPower: 14
+  jumpingPower: 9.5
   jumpBufferTime: 0.1
   coyoteTime: 0.2
   groundLayer:
@@ -7682,6 +7682,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!223 &1421450512 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 2514475295139310219, guid: 000f885e13f09e743ba73c59e03158b1, type: 3}
+  m_PrefabInstance: {fileID: 571044377}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1422622442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11381,6 +11386,14 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 708995298}
+    - target: {fileID: 8143652745858361716, guid: b08cfb2b78bc91146b032f1e34a25772, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 519420031}
+    - target: {fileID: 8143652745858361716, guid: b08cfb2b78bc91146b032f1e34a25772, type: 3}
+      propertyPath: worldSpaceCanvas
+      value: 
+      objectReference: {fileID: 1421450512}
     - target: {fileID: 8214688316611237540, guid: b08cfb2b78bc91146b032f1e34a25772, type: 3}
       propertyPath: m_Material
       value: 
