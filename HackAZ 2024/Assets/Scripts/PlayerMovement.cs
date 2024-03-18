@@ -75,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             Vector2 normal = collision.GetContact(0).normal;
-            if (normal.y > 0.5)
+            if (normal.y > 0.01)
             {
                 isGrounded = true;
             }

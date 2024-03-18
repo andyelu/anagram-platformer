@@ -168,6 +168,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   resetThreshold: -7
+  nextLevel: 0
+  screenAnimator: {fileID: 0}
 --- !u!95 &5136815118845360257
 Animator:
   serializedVersion: 5
