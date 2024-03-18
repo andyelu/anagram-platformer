@@ -40,11 +40,11 @@ public class Tile : MonoBehaviour, IPointerClickHandler
         {
             letterBankScript.OnTileClicked(this);
         }
+        //if (creationRowScript != null)
+        //{
+        //    creationRowScript.OnTileClicked(this);
+        //}
 
-        if (creationRowScript != null)
-        {
-            creationRowScript.OnTileClicked(this);
-        }
 
         
     }

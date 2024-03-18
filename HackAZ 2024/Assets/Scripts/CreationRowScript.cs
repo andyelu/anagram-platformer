@@ -69,20 +69,20 @@ public class CreationRowScript : MonoBehaviour
         n--;
     }
 
-    public void OnTileClicked(Tile clickedTile)
-    {
-        int index = Array.IndexOf(tiles, clickedTile);
-        if (index != -1)
-        {
-            Debug.Log("Clicked tile index (ANAGRAM): " + index);
+    //public void OnTileClicked(Tile clickedTile)
+    //{
+    //    int index = Array.IndexOf(tiles, clickedTile);
+    //    if (index != -1)
+    //    {
+    //        Debug.Log("Clicked tile index (ANAGRAM): " + index);
 
-            if (n != 0 && tiles[index].letter != ' ')
-            {
-                transferLetterToBank();
-            }
+    //        if (n != 0 && tiles[index].letter != ' ')
+    //        {
+    //            transferLetterToBank();
+    //        }
 
-        }
-    }
+    //    }
+    //}
 
     public void transferLetterToBank()
     {
