@@ -11,6 +11,9 @@ public class CreationRowScript : MonoBehaviour
     [SerializeField]
     private ValidAnagramScript validAnagramScript;
 
+    public GameObject prefabToPlace;
+    public Canvas worldSpaceCanvas;
+    public Camera mainCamera;
 
     private void Awake()
     {
@@ -35,7 +38,24 @@ public class CreationRowScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return))
         {
             Debug.Log("Initiating word validation");
-            Debug.Log(validateWord());
+            if (validateWord())
+            {
+
+                // Use the current mouse position
+                Vector3 screenPoint = Input.mousePosition;
+                // Ensure the z-coordinate is set properly to project the mouse position into the world correctly
+                screenPoint.z = mainCamera.nearClipPlane;
+                Vector3 worldPoint = mainCamera.ScreenToWorldPoint(screenPoint);
+                worldPoint.z = 0; // Assuming you want the prefab to be instantiated at z = 0
+                Debug.Log(worldPoint);
+
+                // Instantiate the prefab at the calculated world point
+                // If the prefab is a UI element and should be part of the worldSpaceCanvas, set it as the parent
+                GameObject blocks = Instantiate(prefabToPlace, worldPoint, Quaternion.identity, worldSpaceCanvas.transform);
+                transferAllLettersToBank();
+                //blocks.transform.position = Input.mousePosition;
+
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Delete) || Input.GetKeyDown(KeyCode.Backspace))
@@ -81,6 +101,14 @@ public class CreationRowScript : MonoBehaviour
                 transferLetterToBank();
             }
 
+        }
+    }
+
+    public void transferAllLettersToBank()
+    {
+        while (n > 0)
+        {
+            transferLetterToBank();
         }
     }
 

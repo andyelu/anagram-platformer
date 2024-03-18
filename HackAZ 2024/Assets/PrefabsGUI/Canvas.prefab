@@ -147,6 +147,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   validAnagramScript: {fileID: 4898532538330101333}
+  prefabToPlace: {fileID: 0}
+  worldSpaceCanvas: {fileID: 0}
+  mainCamera: {fileID: 0}
 --- !u!114 &4898532538330101333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -953,7 +956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   worldSpaceCanvas: {fileID: 0}
   mainCamera: {fileID: 0}
-  yourElementPrefab: {fileID: 0}
+  yourElementPrefab: {fileID: 1458694409350793292, guid: fe11c6f8680dc4142a808dd40b932034, type: 3}
 --- !u!224 &7502808965959002009 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5018914861266587180, guid: 6ebbc361769c43d42a91d5afa1afc7bb, type: 3}

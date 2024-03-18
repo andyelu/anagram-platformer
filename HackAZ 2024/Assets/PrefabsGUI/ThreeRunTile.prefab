@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5742034747169060977}
-  m_Layer: 5
+  - component: {fileID: 7469080429082473825}
+  m_Layer: 3
   m_Name: ThreeRunTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,6 +39,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7469080429082473825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458694409350793292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06a449b39c9d6b94a8877a202f8912e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isClicked: 0
 --- !u!1001 &1284369422961237806
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46,9 +60,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5742034747169060977}
     m_Modifications:
+    - target: {fileID: 3700504487413742232, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5248412362136661684, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: m_Name
       value: GameWorldBlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248412362136661684, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5507764500817523978, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: m_Pivot.x
@@ -148,9 +170,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5742034747169060977}
     m_Modifications:
+    - target: {fileID: 3700504487413742232, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5248412362136661684, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: m_Name
       value: GameWorldBlock (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248412362136661684, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5507764500817523978, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: m_Pivot.x
@@ -250,9 +280,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5742034747169060977}
     m_Modifications:
+    - target: {fileID: 3700504487413742232, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5248412362136661684, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: m_Name
       value: GameWorldBlock (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248412362136661684, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5507764500817523978, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: m_Pivot.x
