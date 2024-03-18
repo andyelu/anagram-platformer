@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Level 0.unity
     guid: de895dc805c35164a8b309b1e26abd22
+  - enabled: 1
+    path: Assets/Level 3.unity
+    guid: 6ae621bf4f6179245b6bb9b2b6447b49
   m_configObjects: {}
