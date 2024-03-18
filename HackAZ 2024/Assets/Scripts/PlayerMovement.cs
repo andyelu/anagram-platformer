@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     private float lastJumpTime;
     private bool isGrounded;
     public float nextLevel;
+    public Animator screenAnimator; 
 
     private void Awake()
     {
@@ -31,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if(transform.position.y < resetThreshold) {
             StartCoroutine(ScreenWipeAndReset());
+
+            screenAnimator.SetTrigger("Fall");
         }
 
         float horizontal = Input.GetAxisRaw("Horizontal");
