@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(transform.position.y < resetThreshold) {
             StartCoroutine(ScreenWipeAndReset());
-
+            Tracker.Reset();
             screenAnimator.SetTrigger("Fall");
         }
 

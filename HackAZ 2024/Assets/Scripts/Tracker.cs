@@ -7,11 +7,12 @@ public static class Tracker
 
     public static void Add(string word)
     {
-        return _words.Add(word);
+        _words.Add(word);
     }
 
     public static void Reset()
     {
         _words.Clear();
+        Debug.Log("Words collection has been reset.");
     }
 }
