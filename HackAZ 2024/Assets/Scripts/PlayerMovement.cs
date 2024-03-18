@@ -113,6 +113,7 @@ public class PlayerMovement : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.CompareTag("Fish")) {
             Destroy(other.gameObject);
+            Tracker.Reset();
             SceneManager.LoadScene("Level " + nextLevel);
         }
     }
