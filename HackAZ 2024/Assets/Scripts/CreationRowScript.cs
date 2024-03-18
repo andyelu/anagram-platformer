@@ -57,6 +57,7 @@ public class CreationRowScript : MonoBehaviour
 
                 // place prefab into the game canvas
                 setCurrentStringGlobalReference();
+                Tracker.Add(References.currentString);
                 GameObject blocks = Instantiate(prefabs[n-1], worldPoint, Quaternion.identity, worldSpaceCanvas.transform);
                 transferAllLettersToBank();
                 //blocks.transform.position = Input.mousePosition;
@@ -105,6 +106,9 @@ public class CreationRowScript : MonoBehaviour
         }
 
         References.currentString = str;
+        References.counter = 0;
+        Debug.Log("n:" +  n);
+        Debug.Log(References.counter);
         Debug.Log(References.currentString);
     }
 
@@ -148,6 +152,11 @@ public class CreationRowScript : MonoBehaviour
 
         if (!string.IsNullOrWhiteSpace(word) && validAnagramScript != null)
         {
+            if (Tracker.Contains(word))
+            {
+                Debug.Log("in tracker");
+                return false;
+            }
             // Check if the dictionary contains the key and if the set associated with this key contains the word.
             if (DictionaryUtils.bank.ContainsKey(References.currentKey) && DictionaryUtils.bank[References.currentKey].Contains(word))
             {

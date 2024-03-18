@@ -4,6 +4,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.SceneManagement;
+using System.Runtime.CompilerServices;
 
 
 public class LetterBankScript : MonoBehaviour
@@ -24,7 +26,8 @@ public class LetterBankScript : MonoBehaviour
         {
             tile.letterBankScript = this;
         }
-        fillArr();
+        string str = pickKey();
+        fillArr(str);
         n = 6;
 
     }
@@ -33,12 +36,34 @@ public class LetterBankScript : MonoBehaviour
     // later add a text file contianing anagrams on each line, then we can replace the code
     // below and instead add a thing that selects a random line and scrambles those letters
 
-    private void fillArr()
+    private string pickKey()
     {
+        Scene activeScene = SceneManager.GetActiveScene();
+
+
         int len = DictionaryUtils.bank.Count;
         int randomNum = UnityEngine.Random.Range(0, len);
         string[] keysArray = DictionaryUtils.bank.Keys.ToArray();
         string str = keysArray[randomNum];
+        if (activeScene.name == "Level 1")
+        {
+            str = "WYDOSR";
+        }
+
+        if (activeScene.name == "Level 2")
+        {
+            str = "INASEL";
+        }
+
+        if (activeScene.name == "Level 3")
+        {
+            str = "YLRAEW";
+        }
+
+        return str;
+
+    }
+    public void fillArr(string str) { 
         References.currentKey = str;
         string shuffledString = ShuffleString(str);
 
