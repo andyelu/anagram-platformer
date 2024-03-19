@@ -11,7 +11,6 @@ public class PlayerBehavior : MonoBehaviour
     [SerializeField] private float coyoteTime = 0.2f;
     [SerializeField] private LayerMask groundLayer;
 
-    public float resetThreshold = -7f;
     private Rigidbody2D rb;
     private CapsuleCollider2D col;
     private Animator animator;

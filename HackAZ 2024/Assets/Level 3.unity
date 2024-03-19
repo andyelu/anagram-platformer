@@ -30380,7 +30380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpingPower: 10
+  jumpingPower: 12
   jumpBufferTime: 0.1
   coyoteTime: 0.2
   groundLayer:
