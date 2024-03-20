@@ -7,12 +7,23 @@ public class IglooBehavior : MonoBehaviour
 {
     public Transform checkpointPosition;
     public PlayerBehavior playerBehavior;
+    private bool checkPointReached = false;
+    private Animator animator;
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (!checkPointReached)
         {
-            playerBehavior.SetSpawnPosition(checkpointPosition);
+            Debug.Log("Igloo Reached");
+            if (other.gameObject.CompareTag("Player"))
+            {
+                playerBehavior.SetSpawnPosition(checkpointPosition);
+            }
+            animator = GetComponent<Animator>();
+
+            animator.SetBool("flagReached", true);
+
+            checkPointReached = true;
         }
     }
 }
