@@ -16,6 +16,8 @@ public class PlayerBehavior : MonoBehaviour
     private float jumpBufferTime = 0.2f;
     private float jumpBufferCounter;
 
+    public float resetThreshold = -7f;
+
     [SerializeField] private float speed = 8f;
     [SerializeField] private float jumpingPower = 16f;
 
@@ -32,11 +34,10 @@ public class PlayerBehavior : MonoBehaviour
 
     private void Update()
     {
-        //if(transform.position.y < resetThreshold) {
-        //    StartCoroutine(ScreenWipeAndReset());
-        //    Tracker.Reset();
-        //    screenAnimator.SetTrigger("Fall");
-        //}
+        if(transform.position.y < resetThreshold) {
+            StartCoroutine(ScreenWipeAndReset());
+            Tracker.Reset();
+        }
 
         horizontal = Input.GetAxisRaw("Horizontal");
 
