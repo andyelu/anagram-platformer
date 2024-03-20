@@ -1499,6 +1499,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PinkFish
       objectReference: {fileID: 0}
+    - target: {fileID: 5646732858443894157, guid: 06ff23a4455665d42aac48e03af34853, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646732858443894157, guid: 06ff23a4455665d42aac48e03af34853, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.53
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
