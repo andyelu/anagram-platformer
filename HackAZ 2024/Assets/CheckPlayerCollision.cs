@@ -11,11 +11,11 @@ public class CheckPlayerCollision : MonoBehaviour
     {
 
         Debug.Log("Entered");
-        if (other.gameObject.CompareTag("Player"))
+        if (!block.isClicked && other.gameObject.CompareTag("Player"))
         {
 
             block.playerInTrigger = true;
-            block.GrayOutAllChildImages(); // Optionally gray out images if the player is inside the trigger
+            block.GrayOutAllChildImages();
         }
     }
 
@@ -23,10 +23,10 @@ public class CheckPlayerCollision : MonoBehaviour
     {
 
         Debug.Log("Exited");
-        if (other.gameObject.CompareTag("Player"))
+        if (!block.isClicked && other.gameObject.CompareTag("Player"))
         {
             block.playerInTrigger = false;
-            // Optionally reset the colorization if you want it to revert when the player leaves
+            block.ColorizeAllChildImages();
         }
     }
 }

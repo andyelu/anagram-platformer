@@ -8,7 +8,7 @@ public class GameWorldBlock : MonoBehaviour
 {
     //[SerializeField]
     //private Color green = new Color(0.81f, 0.94f, 0.75f, 1);
-    private bool isClicked = false;
+    public bool isClicked = false;
     private BoxCollider2D[] allColliders;
     private List<BoxCollider2D> boxes;
     private List<BoxCollider2D> triggers;
@@ -107,7 +107,7 @@ public class GameWorldBlock : MonoBehaviour
         }
     }
 
-    private void ColorizeAllChildImages()
+    public void ColorizeAllChildImages()
     {
         foreach (Image image in images)
         {
