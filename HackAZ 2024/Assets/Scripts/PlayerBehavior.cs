@@ -1,8 +1,6 @@
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.SceneManagement;
-using UnityEditor.Tilemaps;
 
 public class PlayerBehavior : MonoBehaviour
 {
@@ -16,7 +14,9 @@ public class PlayerBehavior : MonoBehaviour
     private float jumpBufferTime = 0.2f;
     private float jumpBufferCounter;
 
-    public float resetThreshold = -7f;
+    public float resetThreshold;
+
+    public Transform respawnPosition;
 
     [SerializeField] private float speed = 8f;
     [SerializeField] private float jumpingPower = 16f;
@@ -26,7 +26,16 @@ public class PlayerBehavior : MonoBehaviour
     [SerializeField] private CapsuleCollider2D groundCheck;
 
     private Animator animator;
-    // public int nextLevel;
+
+    public void SetSpawnPosition(Transform newSpawnPosition)
+    {
+        respawnPosition = newSpawnPosition;
+    }
+
+    public void TeleportBackToSpawnPoint()
+    {
+        transform.position = respawnPosition.position;
+    }
 
     private void Awake()
     {
@@ -36,8 +45,7 @@ public class PlayerBehavior : MonoBehaviour
     private void Update()
     {
         if(transform.position.y < resetThreshold) {
-            StartCoroutine(ScreenWipeAndReset());
-            Tracker.Reset();
+            transform.position = respawnPosition.position;
         }
 
         horizontal = Input.GetAxisRaw("Horizontal");
