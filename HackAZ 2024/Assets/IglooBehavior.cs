@@ -12,18 +12,18 @@ public class IglooBehavior : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (!checkPointReached)
+        if (!checkPointReached && other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Igloo Reached");
-            if (other.gameObject.CompareTag("Player"))
-            {
-                playerBehavior.SetSpawnPosition(checkpointPosition);
-            }
+            //Debug.Log("Igloo Reached");
+            playerBehavior.SetSpawnPosition(checkpointPosition);
+
             animator = GetComponent<Animator>();
 
             animator.SetBool("flagReached", true);
 
             checkPointReached = true;
+        
+            
         }
     }
 }
