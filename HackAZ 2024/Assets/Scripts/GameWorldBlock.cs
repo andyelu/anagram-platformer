@@ -6,38 +6,27 @@ using UnityEngine.UI;
 
 public class GameWorldBlock : MonoBehaviour
 {
-    //[SerializeField]
-    //private Color green = new Color(0.81f, 0.94f, 0.75f, 1);
     public bool isClicked = false;
-    private BoxCollider2D[] allColliders;
-    private List<BoxCollider2D> boxes;
+    private BoxCollider2D parentCollider; // Use single BoxCollider2D attached to parent
     private List<BoxCollider2D> triggers;
     private TextMeshProUGUI[] texts;
     private Image[] images;
     public bool playerInTrigger = false;
+
     private void Start()
     {
-        allColliders = GetComponentsInChildren<BoxCollider2D>();
-        triggers = new List<BoxCollider2D>();
-        boxes = new List<BoxCollider2D>();
-
-        foreach (var collider in allColliders)
+        parentCollider = GetComponent<BoxCollider2D>(); // Get the BoxCollider2D component attached to this parent object
+        if (parentCollider == null)
         {
-            if (collider.isTrigger)
-            {
-                triggers.Add(collider); // Add to triggers list
-            }
-            else
-            {
-                boxes.Add(collider); // Add to solid colliders list
-            }
+            Debug.LogError("No BoxCollider2D found on the parent object.");
+            return;
         }
 
-        // initally disable colliders
-        foreach (var collider in boxes)
-        {
-            collider.enabled = false;
-        }
+        // Initially disable the parent collider
+        parentCollider.enabled = false;
+
+        triggers = new List<BoxCollider2D>(GetComponentsInChildren<BoxCollider2D>()); // Get all BoxCollider2D components in children
+        triggers.RemoveAll(c => !c.isTrigger); // Remove the parent collider from the list if it's there
 
         images = GetComponentsInChildren<Image>();
         texts = GetComponentsInChildren<TextMeshProUGUI>(); // Get all TextMeshProUGUI components in children
@@ -71,23 +60,16 @@ public class GameWorldBlock : MonoBehaviour
             Vector3 worldPosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distanceFromCamera));
             transform.position = worldPosition;
 
-
-
             if (Input.GetMouseButtonDown(0) && !playerInTrigger)
             {
                 ResetCounterAndString();
                 isClicked = true;
 
-
-
-                foreach (var collider in boxes)
-                {
-                    collider.enabled = true;
-                }
+                // Enable the parent collider
+                parentCollider.enabled = true;
 
                 ColorizeAllChildImages();
             }
-            
         }
     }
 
@@ -103,7 +85,7 @@ public class GameWorldBlock : MonoBehaviour
     {
         foreach (Image image in images)
         {
-            image.color = new Color(0.5f, 0.5f, 0.5f, 1); ;
+            image.color = new Color(0.5f, 0.5f, 0.5f, 1);
         }
     }
 
@@ -114,7 +96,4 @@ public class GameWorldBlock : MonoBehaviour
             image.color = new Color(1f, 1f, 1f, 1);
         }
     }
-
-    
-
 }
