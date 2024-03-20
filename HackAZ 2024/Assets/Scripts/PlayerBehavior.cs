@@ -81,6 +81,15 @@ public class PlayerBehavior : MonoBehaviour
 
         Flip();
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Bullet"))
+        {
+            TeleportBackToSpawnPoint();
+        }
+    }
+
     IEnumerator ScreenWipeAndReset()
     {
 
