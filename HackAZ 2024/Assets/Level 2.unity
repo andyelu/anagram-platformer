@@ -23767,6 +23767,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SPIKERIGHT
       objectReference: {fileID: 0}
+    - target: {fileID: 5981050690373751031, guid: 631415e11741d5147b2585ab01eb1cd3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7757922380726631539, guid: 631415e11741d5147b2585ab01eb1cd3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.9093904
