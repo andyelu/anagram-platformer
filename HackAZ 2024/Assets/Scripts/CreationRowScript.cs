@@ -2,14 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class CreationRowScript : MonoBehaviour
 {
     public Tile[] tiles { get; private set; }
     private int n;
-
-    [SerializeField]
-    private ValidAnagramScript validAnagramScript;
 
     public GameObject prefabLenOne;
     public GameObject prefabLenTwo;
@@ -21,6 +20,7 @@ public class CreationRowScript : MonoBehaviour
 
     public Canvas worldSpaceCanvas;
     public Camera mainCamera;
+    public TextMeshProUGUI invalidWordText;
 
     private void Awake()
     {
@@ -58,10 +58,9 @@ public class CreationRowScript : MonoBehaviour
                 // place prefab into the game canvas
                 setCurrentStringGlobalReference();
                 Tracker.Add(References.currentString);
-                GameObject blocks = Instantiate(prefabs[n-1], worldPoint, Quaternion.identity, worldSpaceCanvas.transform);
+                GameObject blocks = Instantiate(prefabs[n - 1], worldPoint, Quaternion.identity, worldSpaceCanvas.transform);
                 transferAllLettersToBank();
-                //blocks.transform.position = Input.mousePosition;
-
+           
             }
         }
 
@@ -150,11 +149,12 @@ public class CreationRowScript : MonoBehaviour
             word += tiles[i].letter;
         }
 
-        if (!string.IsNullOrWhiteSpace(word) && validAnagramScript != null)
+        if (!string.IsNullOrWhiteSpace(word))
         {
             if (Tracker.Contains(word))
             {
                 Debug.Log("in tracker");
+                invalidWord(true);
                 return false;
             }
             // Check if the dictionary contains the key and if the set associated with this key contains the word.
@@ -164,7 +164,50 @@ public class CreationRowScript : MonoBehaviour
             }
         }
 
+        invalidWord(false) ;
         return false;
+    }
+
+    private void invalidWord(bool inTracker)
+    {
+        string errorMsg;
+        if (inTracker)
+        {
+            errorMsg = "you  already  used  that!";
+        } else
+        {
+            errorMsg = "invalid  word!";
+        }
+
+        // Start the blink coroutine for each tile
+        foreach (Tile tile in tiles)
+        {
+            StartCoroutine(BlinkTile(tile, errorMsg));
+        }
+    }
+
+    private IEnumerator BlinkTile(Tile tile, string errorMsg)
+    {
+        Color originalColor = Color.white;
+        Color blinkColor = Color.red;
+        Image tileImage = tile.imageComponent; 
+        int blinkTimes = 3;
+        float blinkDuration = 0.2f;
+
+        // Show invalid word text
+        invalidWordText.text = errorMsg;
+        invalidWordText.gameObject.SetActive(true);
+
+        for (int i = 0; i < blinkTimes; i++)
+        {
+            tileImage.color = blinkColor;
+            yield return new WaitForSeconds(blinkDuration);
+            tileImage.color = originalColor;
+            yield return new WaitForSeconds(blinkDuration);
+        }
+
+        invalidWordText.gameObject.SetActive(false);
+
     }
 
 }

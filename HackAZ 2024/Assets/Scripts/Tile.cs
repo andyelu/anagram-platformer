@@ -12,8 +12,7 @@ public class Tile : MonoBehaviour, IPointerClickHandler
     public Sprite emptyBlock;
     public Sprite letterBlock;
 
-    [SerializeField]
-    private Image imageComponent;
+    public Image imageComponent;
 
     public char letter { get; set; }
 
