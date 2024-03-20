@@ -7,15 +7,16 @@ using UnityEngine.UI;
 public class GameWorldBlock : MonoBehaviour
 {
     public bool isClicked = false;
-    private BoxCollider2D parentCollider; // Use single BoxCollider2D attached to parent
+    private BoxCollider2D parentCollider;
     private List<BoxCollider2D> triggers;
     private TextMeshProUGUI[] texts;
     private Image[] images;
     public bool playerInTrigger = false;
+    public GameObject toolTips;
 
     private void Start()
     {
-        parentCollider = GetComponent<BoxCollider2D>(); // Get the BoxCollider2D component attached to this parent object
+        parentCollider = GetComponent<BoxCollider2D>();
         if (parentCollider == null)
         {
             Debug.LogError("No BoxCollider2D found on the parent object.");
@@ -59,11 +60,15 @@ public class GameWorldBlock : MonoBehaviour
             float distanceFromCamera = Mathf.Abs(Camera.main.transform.position.z - transform.position.z);
             Vector3 worldPosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distanceFromCamera));
             transform.position = worldPosition;
+            References.toolTipsToggle = true;
+
+
 
             if (Input.GetMouseButtonDown(0) && !playerInTrigger)
             {
                 ResetCounterAndString();
                 isClicked = true;
+                References.toolTipsToggle = false;
 
                 // Enable the parent collider
                 parentCollider.enabled = true;

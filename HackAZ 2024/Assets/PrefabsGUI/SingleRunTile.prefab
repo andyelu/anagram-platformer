@@ -52,6 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isClicked: 0
   playerInTrigger: 0
+  toolTips: {fileID: 6787657502812225528, guid: 7e085e530a14a094ba3a9311318d072b, type: 3}
 --- !u!61 &1348336621353484169
 BoxCollider2D:
   m_ObjectHideFlags: 0
