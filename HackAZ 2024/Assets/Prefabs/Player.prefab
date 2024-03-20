@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 136d4304a03db55418aafc81a24ac91c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dust: {fileID: 0}
+  dust: {fileID: 7398493101946195407}
   resetThreshold: -20
   respawnPosition: {fileID: 0}
   speed: 5
@@ -434,5 +434,10 @@ PrefabInstance:
 --- !u!4 &6201401544279636705 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6721964786431054398, guid: 596521ec69675754e8eda323ecbf4eb1, type: 3}
+  m_PrefabInstance: {fileID: 812612222457014495}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7398493101946195407 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7920214106133406992, guid: 596521ec69675754e8eda323ecbf4eb1, type: 3}
   m_PrefabInstance: {fileID: 812612222457014495}
   m_PrefabAsset: {fileID: 0}
