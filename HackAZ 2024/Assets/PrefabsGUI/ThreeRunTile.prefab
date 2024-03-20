@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06a449b39c9d6b94a8877a202f8912e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isClicked: 0
+  playerInTrigger: 0
 --- !u!1001 &1284369422961237806
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60,6 +60,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5742034747169060977}
     m_Modifications:
+    - target: {fileID: -8534707086078082863, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
+      propertyPath: block
+      value: 
+      objectReference: {fileID: 7469080429082473825}
     - target: {fileID: 3700504487413742232, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -170,6 +174,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5742034747169060977}
     m_Modifications:
+    - target: {fileID: -8534707086078082863, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
+      propertyPath: block
+      value: 
+      objectReference: {fileID: 7469080429082473825}
     - target: {fileID: 3700504487413742232, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -280,6 +288,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5742034747169060977}
     m_Modifications:
+    - target: {fileID: -8534707086078082863, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
+      propertyPath: block
+      value: 
+      objectReference: {fileID: 7469080429082473825}
     - target: {fileID: 3700504487413742232, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: m_Layer
       value: 3
