@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 4520408625537087191}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,14 +162,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpingPower: 27
-  jumpBufferTime: 0.1
-  coyoteTime: 0.2
+  rb: {fileID: 0}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  resetThreshold: -7
-  nextLevel: 0
-  screenAnimator: {fileID: 0}
+  groundCheck: {fileID: 0}
 --- !u!95 &5136815118845360257
 Animator:
   serializedVersion: 5

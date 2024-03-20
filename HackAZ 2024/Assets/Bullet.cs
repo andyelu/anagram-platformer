@@ -19,10 +19,10 @@ public class Bullet : MonoBehaviour
             Tracker.Reset();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-        else
-        {
-            Destroy(collision.gameObject);
-        }
+        // else
+        // {
+        //     Destroy(collision.gameObject);
+        // }
         Destroy(gameObject);
     }
 }

@@ -26,6 +26,7 @@ public class PlayerBehavior : MonoBehaviour
     [SerializeField] private CapsuleCollider2D groundCheck;
 
     private Animator animator;
+    // public int nextLevel;
 
     private void Awake()
     {
@@ -80,17 +81,6 @@ public class PlayerBehavior : MonoBehaviour
         // Reload the scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
-    // level logic
-    //void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    if (other.gameObject.CompareTag("Fish"))
-    //    {
-    //        Destroy(other.gameObject);
-    //        Tracker.Reset();
-    //        SceneManager.LoadScene("Level " + nextLevel);
-    //    }
-    //}
 
     private void FixedUpdate()
     {
