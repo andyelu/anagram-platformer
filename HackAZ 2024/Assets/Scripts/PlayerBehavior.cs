@@ -31,7 +31,7 @@ public class PlayerBehavior : MonoBehaviour
 
     public void SetSpawnPosition(Transform newSpawnPosition)
     {
-        respawnPosition = newSpawnPosition;
+        respawnPosition.position = newSpawnPosition.position;
     }
 
     public void TeleportBackToSpawnPoint()
