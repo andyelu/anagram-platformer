@@ -14,15 +14,12 @@ public class Bullet : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.CompareTag("Player"))
-        {
-            Tracker.Reset();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-        // else
-        // {
-        //     Destroy(collision.gameObject);
-        // }
+            //if (collision.gameObject.CompareTag("Player"))
+            //{
+            
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            //}
+
         Destroy(gameObject);
     }
 }
