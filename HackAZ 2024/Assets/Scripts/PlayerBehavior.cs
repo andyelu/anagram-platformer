@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerBehavior : MonoBehaviour
 {
+    public ParticleSystem dust;
+
     private float horizontal;
     private bool isFacingRight = true;
     private bool isJumping;
@@ -69,6 +71,7 @@ public class PlayerBehavior : MonoBehaviour
         if (coyoteTimeCounter > 0f && jumpBufferCounter > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            CreateDust();
             jumpBufferCounter = 0f;
         }
 
@@ -118,6 +121,11 @@ public class PlayerBehavior : MonoBehaviour
     {
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
         {
+            if (IsGrounded())
+            {
+                CreateDust();
+            } 
+            
             Vector3 localScale = transform.localScale;
             isFacingRight = !isFacingRight;
             localScale.x *= -1f;
@@ -130,6 +138,11 @@ public class PlayerBehavior : MonoBehaviour
         isJumping = true;
         yield return new WaitForSeconds(0.4f);
         isJumping = false;
+    }
+
+    private void CreateDust()
+    {
+        dust.Play();
     }
 }
 
