@@ -8,7 +8,7 @@ Anagrammers is a game developed using Unity and C#.
 
 ## Play Online
 
-No installation is required to play Anagrammers. The game is hosted online.
+No installation is required to play Anagrammers. The game is hosted online. For the best experience, play in fullscreen!
 
 Use the following link:
 [Play Anagrammers](https://andylumonkey.itch.io/anagramers)
