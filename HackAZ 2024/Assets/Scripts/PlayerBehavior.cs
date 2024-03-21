@@ -31,7 +31,7 @@ public class PlayerBehavior : MonoBehaviour
 
     public void SetSpawnPosition(Transform newSpawnPosition)
     {
-        respawnPosition = newSpawnPosition;
+        respawnPosition.position = newSpawnPosition.position;
     }
 
     public void TeleportBackToSpawnPoint()
@@ -70,6 +70,7 @@ public class PlayerBehavior : MonoBehaviour
 
         if (coyoteTimeCounter > 0f && jumpBufferCounter > 0f)
         {
+            Debug.Log("player is, " + groundCheck);
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             CreateDust();
             jumpBufferCounter = 0f;
@@ -77,6 +78,7 @@ public class PlayerBehavior : MonoBehaviour
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
+            
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
 
             coyoteTimeCounter = 0f;
@@ -112,6 +114,7 @@ public class PlayerBehavior : MonoBehaviour
 
     private bool IsGrounded()
     {
+        
         if (groundCheck == null) return false;
         RaycastHit2D raycastHit = Physics2D.CapsuleCast(groundCheck.bounds.center, groundCheck.size, CapsuleDirection2D.Vertical, 0, Vector2.down, 0.1f, groundLayer);
         return raycastHit.collider != null;
