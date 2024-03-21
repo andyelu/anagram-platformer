@@ -6,11 +6,6 @@ using UnityEngine.SceneManagement;
 public class LevelSelect1 : MonoBehaviour
 {
     public int level;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     public void OpenScene() {
         Tracker.Reset();

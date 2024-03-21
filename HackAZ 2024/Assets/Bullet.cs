@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement; 
+using UnityEngine.SceneManagement;
 
 public class Bullet : MonoBehaviour
 {
@@ -13,13 +13,16 @@ public class Bullet : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Turret"))
         {
-            //if (collision.gameObject.CompareTag("Player"))
-            //{
-            
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            //}
 
-        Destroy(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+
     }
 }
