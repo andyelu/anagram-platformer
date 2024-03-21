@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Fish
   - Bullet
+  - Turret
   layers:
   - Default
   - TransparentFX

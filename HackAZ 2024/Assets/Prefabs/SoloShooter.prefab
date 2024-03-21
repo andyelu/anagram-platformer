@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4094245847532985836}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bullet Spawn Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,10 +42,10 @@ GameObject:
   - component: {fileID: 787857560287734132}
   - component: {fileID: 5322331603396737388}
   - component: {fileID: 545976496791727860}
-  - component: {fileID: 452660515032523435}
-  m_Layer: 0
+  - component: {fileID: 2717556550134347666}
+  m_Layer: 3
   m_Name: SoloShooter
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,8 +134,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5712897310586496997, guid: 56a9858d3ba14b5468dc35aac8de70c2, type: 3}
   bulletSpeed: 10
   shootingInterval: 0.75
---- !u!68 &452660515032523435
-EdgeCollider2D:
+--- !u!60 &2717556550134347666
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -167,17 +167,29 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
-  - {x: -0.30657005, y: 0.38098812}
-  - {x: -0.4988556, y: 0.17721987}
-  - {x: -0.50455475, y: -0.3659954}
-  - {x: -0.3543415, y: -0.49040318}
-  - {x: 0.3758793, y: -0.5103369}
-  - {x: 0.5021477, y: -0.37104034}
-  - {x: 0.50082207, y: 0.18581867}
-  - {x: 0.30207253, y: 0.37523365}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
+    m_Paths:
+    - - {x: 0.31731415, y: -0.35991526}
+      - {x: 0.0632782, y: -0.35560322}
+      - {x: -0.309906, y: -0.3311324}
+      - {x: -0.30083847, y: 0.12577152}
+      - {x: -0.3154087, y: 0.38321972}
+      - {x: -0.49993324, y: 0.38479376}
+      - {x: -0.5, y: 0.19234657}
+      - {x: -0.5019474, y: -0.3760662}
+      - {x: -0.37446022, y: -0.50050354}
+      - {x: 0.3753929, y: -0.5004506}
+      - {x: 0.5019283, y: -0.37464428}
+      - {x: 0.5017414, y: 0.19060469}
+      - {x: 0.49668312, y: 0.3794279}
+      - {x: 0.30885315, y: 0.37965488}
+  m_UseDelaunayMesh: 0
