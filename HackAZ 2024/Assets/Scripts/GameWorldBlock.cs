@@ -62,8 +62,15 @@ public class GameWorldBlock : MonoBehaviour
             transform.position = worldPosition;
             References.toolTipsToggle = true;
 
-
-
+            // if right clicked, cancel placement
+            // remove word from tracker
+            if (Input.GetMouseButtonDown(1))
+            {
+                Tracker.Remove(References.currentString);
+                References.toolTipsToggle = false;
+                Destroy(gameObject);
+            }
+           
             if (Input.GetMouseButtonDown(0) && !playerInTrigger)
             {
                 ResetCounterAndString();
