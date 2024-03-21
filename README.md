@@ -4,10 +4,11 @@
 
 ## Overview
 
-Anagrammers is a game developed using Unity and C#, designed to challenge and entertain users by testing their anagram-solving skills.
+Anagrammers is a game developed using Unity and C#.
 
 ## Play Online
 
-No installation is required to play Anagrammers. The game is hosted online and can be played using WebGL technology. Access the game through the following link:
+No installation is required to play Anagrammers. The game is hosted online.
 
+Use the following link:
 [Play Anagrammers](https://andylumonkey.itch.io/anagramers)
