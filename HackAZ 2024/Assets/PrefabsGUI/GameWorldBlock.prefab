@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 3011742645356091769}
   - component: {fileID: 1410397686430354980}
   - component: {fileID: 7291230982125698978}
-  - component: {fileID: -1101115417417742576}
+  - component: {fileID: -9206181723511678263}
   m_Layer: 5
   m_Name: GameWorldBlock
   m_TagString: Untagged
@@ -257,7 +257,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.48, y: 0.48}
   m_EdgeRadius: 0
---- !u!114 &-1101115417417742576
+--- !u!114 &-9206181723511678263
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

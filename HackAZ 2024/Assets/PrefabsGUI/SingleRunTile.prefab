@@ -156,8 +156,8 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 1
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -180,6 +180,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5742034747169060977}
     m_Modifications:
+    - target: {fileID: -9206181723511678263, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
+      propertyPath: block
+      value: 
+      objectReference: {fileID: 7469080429082473825}
     - target: {fileID: -8534707086078082863, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: block
       value: 
