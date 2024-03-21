@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7469080429082473825}
   - component: {fileID: 8659138447054555987}
   - component: {fileID: 6638941588191777550}
+  - component: {fileID: 4637130823294761856}
   m_Layer: 3
   m_Name: ThreeRunTile
   m_TagString: Untagged
@@ -128,6 +129,51 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &4637130823294761856
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458694409350793292}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.44, y: 0.48}
+  m_EdgeRadius: 0
 --- !u!1001 &1284369422961237806
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -137,6 +183,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 5742034747169060977}
     m_Modifications:
     - target: {fileID: -8534707086078082863, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
+      propertyPath: block
+      value: 
+      objectReference: {fileID: 7469080429082473825}
+    - target: {fileID: -1101115417417742576, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: block
       value: 
       objectReference: {fileID: 7469080429082473825}
@@ -255,6 +305,10 @@ PrefabInstance:
       propertyPath: block
       value: 
       objectReference: {fileID: 7469080429082473825}
+    - target: {fileID: -1101115417417742576, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
+      propertyPath: block
+      value: 
+      objectReference: {fileID: 7469080429082473825}
     - target: {fileID: 3700504487413742232, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -367,6 +421,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 5742034747169060977}
     m_Modifications:
     - target: {fileID: -8534707086078082863, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
+      propertyPath: block
+      value: 
+      objectReference: {fileID: 7469080429082473825}
+    - target: {fileID: -1101115417417742576, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: block
       value: 
       objectReference: {fileID: 7469080429082473825}

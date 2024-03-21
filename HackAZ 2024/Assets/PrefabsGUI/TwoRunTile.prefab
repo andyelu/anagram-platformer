@@ -139,6 +139,10 @@ PrefabInstance:
       propertyPath: block
       value: 
       objectReference: {fileID: -1680684191875357461}
+    - target: {fileID: -1101115417417742576, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
+      propertyPath: block
+      value: 
+      objectReference: {fileID: -1680684191875357461}
     - target: {fileID: 3700504487413742232, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -250,6 +254,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 3207703976212423985}
     m_Modifications:
     - target: {fileID: -8534707086078082863, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
+      propertyPath: block
+      value: 
+      objectReference: {fileID: -1680684191875357461}
+    - target: {fileID: -1101115417417742576, guid: 70578b3516b10c943b7cf907e36d01fc, type: 3}
       propertyPath: block
       value: 
       objectReference: {fileID: -1680684191875357461}
