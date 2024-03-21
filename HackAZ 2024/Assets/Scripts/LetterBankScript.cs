@@ -58,6 +58,12 @@ public class LetterBankScript : MonoBehaviour
             str = "YLRAEW";
         }
 
+
+        if (activeScene.name == "Level 6")
+        {
+            str = "BSAINR";
+        }
+
         return str;
 
     }
