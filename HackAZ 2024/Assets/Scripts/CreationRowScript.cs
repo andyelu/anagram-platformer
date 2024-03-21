@@ -58,7 +58,7 @@ public class CreationRowScript : MonoBehaviour
                 // place prefab into the game canvas
                 setCurrentStringGlobalReference();
                 Tracker.Add(References.currentString);
-                GameObject blocks = Instantiate(prefabs[n - 1], worldPoint, Quaternion.identity, worldSpaceCanvas.transform);
+                Instantiate(prefabs[n - 1], worldPoint, Quaternion.identity, worldSpaceCanvas.transform);
                 transferAllLettersToBank();
            
             }

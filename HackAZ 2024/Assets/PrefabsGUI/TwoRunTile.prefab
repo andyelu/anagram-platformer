@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3207703976212423985}
   - component: {fileID: -1680684191875357461}
   - component: {fileID: 2062075293398311835}
+  - component: {fileID: 5759419734680015238}
   m_Layer: 3
   m_Name: TwoRunTile
   m_TagString: Untagged
@@ -99,6 +100,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.98, y: 0.48}
   m_EdgeRadius: 0
+--- !u!50 &5759419734680015238
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5485523783461004875}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &246882228460308180
 PrefabInstance:
   m_ObjectHideFlags: 0

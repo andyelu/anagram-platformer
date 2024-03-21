@@ -21,4 +21,9 @@ public static class Tracker
     {
         return _words.Contains(word);
     }
+
+    public static void Remove(string word)
+    {
+        _words.Remove(word);
+    }
 }
