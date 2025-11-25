@@ -71,15 +71,15 @@ public class PlayerBehavior : MonoBehaviour
         if (coyoteTimeCounter > 0f && jumpBufferCounter > 0f)
         {
             Debug.Log("player is, " + groundCheck);
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
             CreateDust();
             jumpBufferCounter = 0f;
         }
 
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+        if (Input.GetButtonUp("Jump") && rb.linearVelocity.y > 0f)
         {
             
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
 
             coyoteTimeCounter = 0f;
         }
@@ -106,9 +106,9 @@ public class PlayerBehavior : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-        animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
-        animator.SetFloat("yVelocity", rb.velocity.y);
+        rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
+        animator.SetFloat("xVelocity", Mathf.Abs(rb.linearVelocity.x));
+        animator.SetFloat("yVelocity", rb.linearVelocity.y);
 
     }
 

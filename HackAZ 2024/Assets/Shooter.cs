@@ -33,6 +33,6 @@ public class Shooter : MonoBehaviour
     void ShootBullet()
     {
         var bulletNew = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
-        bulletNew.GetComponent<Rigidbody2D>().velocity = bulletSpawnPoint.up * bulletSpeed;
+        bulletNew.GetComponent<Rigidbody2D>().linearVelocity = bulletSpawnPoint.up * bulletSpeed;
     }
 }
